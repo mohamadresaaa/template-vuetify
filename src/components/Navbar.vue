@@ -7,12 +7,12 @@
                 <span class="font-weight-light text-lowercase">.org</span>
             </v-toolbar-title>
             <v-spacer></v-spacer>
-            <v-btn color="yellow darken-3" dark href="/login">
-                login
-                <v-icon dark right>lock</v-icon>
+            <v-btn class="hidden-sm-and-down" color="yellow darken-3" dark router :to="authLinks[0].route">
+                {{authLinks[0].text}}
+                <v-icon dark right>{{authLinks[0].icon}}</v-icon>
             </v-btn>
-            <v-btn flat href="/register">
-                <span>register</span>
+            <v-btn class="hidden-sm-and-down" flat router :to="authLinks[1].route">
+                <span>{{authLinks[1].text}}</span>
             </v-btn>
         </v-toolbar>
         <v-navigation-drawer app v-model="drawer" class="blue-grey darken-3">
@@ -34,6 +34,19 @@
                         </v-list-tile-title>
                     </v-list-tile-content>
                 </v-list-tile>
+
+                <v-list-tile class="hidden-md-and-up" router to="/login">
+                    <v-list-tile-action>
+                        <v-icon class="white--text">
+                            lock
+                        </v-icon>
+                    </v-list-tile-action>
+                    <v-list-tile-content>
+                        <v-list-tile-title class="white--text">
+                            Login Or Register
+                        </v-list-tile-title>
+                    </v-list-tile-content>
+                </v-list-tile>
             </v-list>
         </v-navigation-drawer>
     </nav>
@@ -48,7 +61,11 @@ export default {
         { icon: 'home', text: 'Home', route: '/' },
         { icon: 'library_books', text: 'Blog', route: '/Blog' },
         { icon: 'person', text: 'About me', route: '/about_me' },
-        { icon: 'contact_support', text: 'Contact me', route: '/contact_me' }
+        { icon: 'contact_support', text: 'Contact me', route: '/contact_me' },
+      ],
+      authLinks: [
+        { icon: 'lock', text: 'Login', route: '/login' },
+        { text: 'Register', route: '/register' }
       ]
     }
   }
