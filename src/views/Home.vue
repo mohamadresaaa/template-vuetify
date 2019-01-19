@@ -4,14 +4,21 @@
     <v-container fluid class="my-5">
       <h1>sample for note :)</h1>
       <v-layout row wrap class="mb-3">
-        <v-btn small flat color="grey" @click="sortBy('title')">
-          <v-icon small left>folder</v-icon>
-          <span class="caption text-lowercase">By title</span>
-        </v-btn>
-        <v-btn small flat color="grey" @click="sortBy('person')">
-          <v-icon small left>person</v-icon>
-          <span class="caption text-lowercase">By person</span>
-        </v-btn>
+        <v-tooltip top>
+          <v-btn slot="activator" small flat color="grey" @click="sortBy('title')">
+            <v-icon small left>folder</v-icon>
+            <span class="caption text-lowercase">By title</span>
+          </v-btn>
+          <span>Sort by title of note</span>
+        </v-tooltip>
+
+        <v-tooltip top>
+          <v-btn slot="activator" small flat color="grey" @click="sortBy('person')">
+            <v-icon small left>person</v-icon>
+            <span class="caption text-lowercase">By person</span>
+          </v-btn>
+          <span>Sort by person of note</span>
+        </v-tooltip>
       </v-layout>
       <v-card flat v-for="note in notes" :key="note.notes" class="mb-1">
         <v-layout row wrap :class="`pa-3 project ${note.status}`">
