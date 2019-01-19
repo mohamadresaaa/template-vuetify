@@ -3,10 +3,20 @@
     <h1>home page</h1>
     <v-container fluid class="my-5">
       <h1>sample for note :)</h1>
+      <v-layout row wrap class="mb-3">
+        <v-btn small flat color="grey" @click="sortBy('title')">
+          <v-icon small left>folder</v-icon>
+          <span class="caption text-lowercase">By title</span>
+        </v-btn>
+        <v-btn small flat color="grey" @click="sortBy('person')">
+          <v-icon small left>person</v-icon>
+          <span class="caption text-lowercase">By person</span>
+        </v-btn>
+      </v-layout>
       <v-card flat v-for="note in notes" :key="note.notes" class="mb-1">
         <v-layout row wrap :class="`pa-3 project ${note.status}`">
           <v-flex xs12 md6>
-            <div class="caption grey--text">Project title</div>
+            <div class="caption grey--text">Note title</div>
             <div>{{note.title}}</div>
           </v-flex>
           <v-flex xs6 sm4 md2>
@@ -63,6 +73,11 @@ export default {
         { title: 'Create a community forum', person: 'Gouken', due: '20th Oct 2018', status: 'overdue', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!'},
       ]
     }
-  }
+  },
+  methods: {
+    sortBy(prop) {
+      return this.notes.sort((a, b) => a[prop] < b[prop] ? -1 : 1);
+    }
+  },
 }
 </script>
