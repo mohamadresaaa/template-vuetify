@@ -20,7 +20,7 @@
           <span>Sort by person of note</span>
         </v-tooltip>
       </v-layout>
-      <v-card v-for="note in notes" :key="note.notes" class="mb-1">
+      <v-card v-for="note in notes" :key="note.notes" class="mb-3">
         <v-layout row wrap :class="`pa-3 project ${note.status}`">
           <v-flex xs12 md6>
             <div class="caption grey--text">Note title</div>

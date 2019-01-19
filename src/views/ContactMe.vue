@@ -16,6 +16,12 @@
                 {{ contact.role }}
               </div>
             </v-card-text>
+            <v-card-actions>
+              <v-btn small flat color="gery">
+                <v-icon small left>message</v-icon>
+                <span class="text-lowercase">Message</span>
+              </v-btn>
+            </v-card-actions>
           </v-card>
         </v-flex>
       </v-layout>
