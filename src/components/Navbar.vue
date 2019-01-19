@@ -16,12 +16,15 @@
             </v-btn>
         </v-toolbar>
         <v-navigation-drawer app v-model="drawer" class="blue-grey darken-3">
+            <v-layout column align-center>
+                <v-flex class="mt-5">
+                <v-avatar size="100">
+                    <img class="text-lg-center" src="https://randomuser.me/api/portraits/men/85.jpg">
+                </v-avatar>
+                <p class="white--text subheading mt-1">Mohamadreza Mosalli</p>
+                </v-flex>
+            </v-layout>
             <v-list>
-                <v-list-tile avatar>
-                    <v-list-tile-avatar>
-                        <img src="https://randomuser.me/api/portraits/men/85.jpg">
-                    </v-list-tile-avatar>
-                </v-list-tile>
                 <v-list-tile v-for="link in links" :key="link.text" router :to="link.route">
                     <v-list-tile-action>
                         <v-icon class="white--text">
