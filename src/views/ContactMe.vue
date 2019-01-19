@@ -6,7 +6,9 @@
         <v-flex xs12 sm6 md4 lg3 v-for="contact in contacts" :key="contact.name">
           <v-card class="text-xs-center ma-3">
             <v-responsive class="pa-3">
-              conatact image
+              <v-avatar size="100" class="grey lighten-2">
+                <img :src="contact.image" :alt="contact.name">
+              </v-avatar>
             </v-responsive>
             <v-card-text>
               <div class="subheading">
@@ -34,9 +36,9 @@ export default {
   data() {
     return {
       contacts: [
-        { name: 'mohamadreza mosalli', role: 'web developer' },
-        { name: 'ali', role: 'CEO' },
-        { name: 'mohamad', role: 'web designer' }
+        { name: 'mohamadreza mosalli', role: 'web developer', image: 'https://randomuser.me/api/portraits/men/83.jpg' },
+        { name: 'ali', role: 'CEO', image: 'https://randomuser.me/api/portraits/men/84.jpg' },
+        { name: 'mohamad', role: 'web designer', image: 'https://randomuser.me/api/portraits/men/85.jpg' }
       ]
     }
   }
