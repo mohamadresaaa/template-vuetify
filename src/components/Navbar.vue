@@ -1,13 +1,13 @@
 <template>
     <nav>
-        <v-toolbar app dark color="blue-grey darken-4">
+        <v-toolbar app dark color="primary">
             <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
             <v-toolbar-title class="headline text-uppercase">
-                <span class="amber--text">{ mosalli }</span>
+                <span class="white--text">{ mosalli }</span>
                 <span class="font-weight-light text-lowercase">.org</span>
             </v-toolbar-title>
             <v-spacer></v-spacer>
-            <v-btn class="hidden-sm-and-down" color="yellow darken-3" dark router :to="authLinks[0].route">
+            <v-btn class="hidden-sm-and-down" color="white darken-3" light router :to="authLinks[0].route">
                 {{authLinks[0].text}}
                 <v-icon dark right>{{authLinks[0].icon}}</v-icon>
             </v-btn>
@@ -15,13 +15,13 @@
                 <span>{{authLinks[1].text}}</span>
             </v-btn>
         </v-toolbar>
-        <v-navigation-drawer app v-model="drawer" class="blue-grey darken-3">
+        <v-navigation-drawer app v-model="drawer" class="blue accent-2">
             <v-layout column align-center>
-                <v-flex class="mt-5">
-                <v-avatar size="100">
-                    <img class="text-lg-center" src="https://randomuser.me/api/portraits/men/85.jpg">
-                </v-avatar>
-                <p class="white--text subheading mt-1">Mohamadreza Mosalli</p>
+                <v-flex class="mt-5 mb-5">
+                    <v-avatar size="100">
+                        <img class="text-lg-center" src="https://randomuser.me/api/portraits/men/85.jpg">
+                    </v-avatar>
+                    <span class="white--text subheading ml-2">Mohamadreza Mosalli</span>
                 </v-flex>
             </v-layout>
             <v-list>
