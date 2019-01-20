@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import AboutMe from './views/AboutMe.vue';
 import Blog from './views/‌Blog.vue';
 import contactMe from './views/ContactMe.vue';
+import notes from './views/notes/index.vue';
 
 Vue.use(Router)
 
@@ -30,6 +31,11 @@ export default new Router({
       path: '/contact_me',
       name: 'contactMe',
       component: contactMe
+    },
+    {
+      path: '/notes',
+      name: 'notes',
+      component: notes
     }
   ]
 })
