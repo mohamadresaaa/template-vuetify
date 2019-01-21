@@ -6,6 +6,7 @@ import Blog from './views/‌Blog.vue';
 import contactMe from './views/ContactMe.vue';
 import notes from './views/notes/index.vue';
 import addNote from './views/notes/add.vue';
+import editNote from './views/notes/edit.vue';
 
 Vue.use(Router)
 
@@ -42,6 +43,11 @@ export default new Router({
       path: '/notes/add',
       name: 'addNote',
       component: addNote
+    },
+    {
+      path: '/notes/edit',
+      name: 'editNote',
+      component: editNote
     }
   ]
 })

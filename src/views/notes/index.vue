@@ -33,7 +33,7 @@
               <v-btn fab dark small color="black">
                 <v-icon dark>visibility</v-icon>
               </v-btn>
-              <v-btn fab dark small color="primary">
+              <v-btn router to="/notes/edit" fab dark small color="primary">
                 <v-icon dark>edit</v-icon>
               </v-btn>
               <v-btn fab dark small color="red">
