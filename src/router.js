@@ -8,6 +8,8 @@ import notes from './views/notes/index.vue';
 import addNote from './views/notes/add.vue';
 import editNote from './views/notes/edit.vue';
 import todoes from './views/todoes/index.vue';
+import addTodo from './views/todoes/add.vue';
+
 
 Vue.use(Router)
 
@@ -55,6 +57,11 @@ export default new Router({
       path: '/todoes',
       name: 'todoes',
       component: todoes
+    },
+    {
+      path: '/todoes/add',
+      name: 'addTodo',
+      component: addTodo
     }
   ]
 })

@@ -1,7 +1,16 @@
 <template>
   <div>
     <h1 class="font-weight-medium text-capitalize">todoes</h1>
-    <v-card v-for="(todo, index) in todoes" :key="index" class="mt-3">
+    <v-layout row wrap class="mb-3">
+        <v-tooltip bottom>
+            <v-btn router to="/todoes/add" slot="activator" flat color="grey">
+                <v-icon small left>create_new_folder</v-icon>
+                <span class="caption text-capitalize">new todo</span>
+            </v-btn>
+            <span>Create a new todo</span>
+        </v-tooltip>
+    </v-layout>
+    <v-card v-for="(todo, index) in todoes" :key="index" class="mb-3">
         <v-layout row wrap :class="`pa-3 project ${todo.status}`">
           <v-flex xs12 md6>
             <div class="caption grey--text">Content</div>
