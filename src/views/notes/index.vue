@@ -28,7 +28,7 @@
             <div class="caption grey--text">Due by</div>
             <div>{{note.due}}</div>
           </v-flex>
-          <v-flex xs2 sm4 md2>
+          <v-flex xs6 sm4 md2>
             <div class="text-xs-center">
               <v-btn fab dark small color="black">
                 <v-icon dark>visibility</v-icon>

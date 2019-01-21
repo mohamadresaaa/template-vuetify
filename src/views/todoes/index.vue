@@ -20,12 +20,12 @@
             <div class="caption grey--text">Due by</div>
             <div>{{todo.due}}</div>
           </v-flex>
-          <v-flex xs2 sm4 md2>
+          <v-flex xs6 sm4 md2>
             <div>
               <v-chip small :class="`${todo.status} white--text caption`">{{todo.status}}</v-chip>
             </div>
           </v-flex>
-          <v-flex xs2 sm4 md2>
+          <v-flex xs12 sm4 md2>
             <div class="text-xs-center">
                 <v-btn v-if="todo.status == 'uncomplete'" fab dark small color="success">
                     <v-icon dark>done</v-icon>
