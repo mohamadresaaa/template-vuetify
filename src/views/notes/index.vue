@@ -3,7 +3,7 @@
         <h1 class="font-weight-medium text-capitalize">my notes</h1>
         <v-layout row wrap class="mb-3">
             <v-tooltip bottom>
-              <v-btn slot="activator" flat color="grey">
+              <v-btn router to="/notes/add" slot="activator" flat color="grey">
                   <v-icon small left>create_new_folder</v-icon>
                   <span class="caption text-capitalize">new note</span>
               </v-btn>

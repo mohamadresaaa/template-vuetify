@@ -5,6 +5,7 @@ import AboutMe from './views/AboutMe.vue';
 import Blog from './views/‌Blog.vue';
 import contactMe from './views/ContactMe.vue';
 import notes from './views/notes/index.vue';
+import addNote from './views/notes/add.vue';
 
 Vue.use(Router)
 
@@ -36,6 +37,11 @@ export default new Router({
       path: '/notes',
       name: 'notes',
       component: notes
+    },
+    {
+      path: '/notes/add',
+      name: 'addNote',
+      component: addNote
     }
   ]
 })
