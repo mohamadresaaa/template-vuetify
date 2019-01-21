@@ -11,6 +11,7 @@
                     <v-spacer></v-spacer>
                     <v-btn flat @click="submit" class="success mt-3 mr-1">Save</v-btn>
                     <v-btn flat @click="reset" class="purple darken-1 white--text mt-3 mx-1">Reset</v-btn>
+                    <v-btn flat router to="/notes" class="black white--text mt-3 mx-1">Back</v-btn>
                 </v-form>
             </v-card-text>
         </v-card>
