@@ -9,7 +9,7 @@ import addNote from './views/notes/add.vue';
 import editNote from './views/notes/edit.vue';
 import todoes from './views/todoes/index.vue';
 import addTodo from './views/todoes/add.vue';
-
+import editTodo from './views/todoes/edit.vue';
 
 Vue.use(Router)
 
@@ -37,7 +37,7 @@ export default new Router({
       name: 'contactMe',
       component: contactMe
     },
-    // note section
+    // note
     {
       path: '/notes',
       name: 'notes',
@@ -53,6 +53,7 @@ export default new Router({
       name: 'editNote',
       component: editNote
     },
+    // todo
     {
       path: '/todoes',
       name: 'todoes',
@@ -62,6 +63,11 @@ export default new Router({
       path: '/todoes/add',
       name: 'addTodo',
       component: addTodo
+    },
+    {
+      path: '/todoes/edit',
+      name: 'editTodo',
+      component: editTodo
     }
   ]
 })

@@ -27,12 +27,15 @@
           </v-flex>
           <v-flex xs2 sm4 md2>
             <div class="text-xs-center">
-              <v-btn router to="/todoes/edit" fab dark small color="primary">
-                <v-icon dark>edit</v-icon>
-              </v-btn>
-              <v-btn fab dark small color="red">
-                <v-icon dark>delete</v-icon>
-              </v-btn>
+                <v-btn v-if="todo.status == 'uncomplete'" fab dark small color="success">
+                    <v-icon dark>done</v-icon>
+                </v-btn>
+                <v-btn router to="/todoes/edit" fab dark small color="primary">
+                    <v-icon dark>edit</v-icon>
+                </v-btn>
+                <v-btn fab dark small color="red">
+                    <v-icon dark>delete</v-icon>
+                </v-btn>
             </div>
           </v-flex>
         </v-layout>
@@ -44,20 +47,14 @@
   .project.complete{
     border-left: 4px solid #2ecc71;
   }
-  .project.ongoing{
-    border-left: 4px solid #f39c12;
-  }
-  .project.overdue{
+  .project.uncomplete{
     border-left: 4px solid #e74c3c;
   }
 
   .v-chip.complete{
     background-color: #2ecc71;
   }
-  .v-chip.ongoing{
-    background-color: #f39c12;
-  } 
-  .v-chip.overdue{
+  .v-chip.uncomplete{
     background-color: #e74c3c;
   }
 </style>
@@ -67,10 +64,10 @@ export default {
   data() {
     return {
       todoes: [
-        { title: 'Design a new website', due: '1st Jan 2019', status: 'ongoing', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!'},
+        { title: 'Design a new website', due: '1st Jan 2019', status: 'uncomplete', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!'},
         { title: 'Code up the homepage', due: '10th Jan 2019', status: 'complete', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!'},
         { title: 'Design video thumbnails', due: '20th Dec 2018', status: 'complete', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!'},
-        { title: 'Create a community forum', due: '20th Oct 2018', status: 'overdue', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!'},
+        { title: 'Create a community forum', due: '20th Oct 2018', status: 'uncomplete', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!'},
       ]
     }
   }
