@@ -3,7 +3,7 @@
         <v-toolbar app dark color="primary">
             <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
             <v-toolbar-title class="headline text-uppercase">
-                <span class="white--text">{ mosalli }</span>
+                <span class="white--text">hexzm</span>
                 <span class="font-weight-light text-lowercase">.org</span>
             </v-toolbar-title>
             <v-spacer></v-spacer>
