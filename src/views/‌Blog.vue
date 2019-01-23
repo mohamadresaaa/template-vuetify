@@ -18,9 +18,6 @@
                     </div>
                   </v-card-title>
                   <v-card-actions>
-                    <v-btn disabled flat color="gery" class="text-capitalize">
-                    {{ article.person }}
-                    </v-btn>
                     <v-spacer></v-spacer>
                     <v-btn color="primary" class="text-capitalize">read more</v-btn>
                   </v-card-actions>
