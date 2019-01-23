@@ -1,4 +1,4 @@
-# frontend-mosalli
+# Hexzm
 
 ## Project setup
 ```
