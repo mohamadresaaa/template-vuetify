@@ -1,4 +1,4 @@
-# Hexzm
+# UI With Vuetify
 
 ## Project setup
 ```
